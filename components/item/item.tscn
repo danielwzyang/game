@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbdhg4l65lcwf"]
+
+[ext_resource type="Script" path="res://components/item/item.gd" id="1_ljxcc"]
+[ext_resource type="Texture2D" uid="uid://b4gw8l1v8c76b" path="res://assets/items/rock.png" id="1_uhqli"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2ojn2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uhqli")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l5jh4"]
+radius = 24.0
+
+[node name="item" type="Area2D"]
+script = ExtResource("1_ljxcc")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_2ojn2")
+
+[node name="hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_l5jh4")

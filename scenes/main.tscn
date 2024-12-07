@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmwsrai8mtsb8"]
+
+[ext_resource type="PackedScene" uid="uid://dbdhg4l65lcwf" path="res://components/item/item.tscn" id="1_pv6bx"]
+
+[sub_resource type="GDScript" id="GDScript_voldb"]
+script/source = "extends Node2D	
+"
+
+[node name="main" type="Node2D"]
+script = SubResource("GDScript_voldb")
+
+[node name="item" parent="." instance=ExtResource("1_pv6bx")]
+position = Vector2(266, 167)
+
+[node name="item2" parent="." instance=ExtResource("1_pv6bx")]
+position = Vector2(666, 613)
+
+[node name="item3" parent="." instance=ExtResource("1_pv6bx")]
+position = Vector2(1170, 325)
